@@ -10,15 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 500ms ease-in-out;
 }
 
 a {
   text-decoration: none;
-  /* color: black; */
 }
 
 #mobile {
-  /* border-radius: 1%; */
   height: 660px;
   width: 400px;
 }
@@ -43,6 +42,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 500ms ease-in-out;
 }
 
 .mobile-menu {
@@ -61,6 +61,31 @@ a {
   cursor: pointer;
 }
 
+.shop-link-effect {
+  transform-origin: 50% 50%;
+  transform: perspective(800px) rotateY(-8deg);
+}
+
+.discover-link-effect {
+  transform-origin: 50% 50%;
+  transform: perspective(800px) rotateY(-8deg) rotateX(-12deg);
+}
+
+.bookmark-link-effect {
+  transform: perspective(400px) rotateX(15deg);
+  transform-origin: 50% 50%;
+}
+
+.cart-link-effect {
+  transform-origin: 50% 50%;
+  transform: perspective(800px) rotateY(8deg) rotateX(-12deg);
+}
+
+.profile-link-effect {
+  transform-origin: 50% 50%;
+  transform: perspective(800px) rotateY(8deg);
+}
+
 .wrapper-menu .link {
   display: flex;
   justify-content: center;
@@ -77,6 +102,6 @@ span {
 }
 
 .active-span {
-  transform: translateY(40px);
+  transform: translateY(34px);
   opacity: 1;
 }

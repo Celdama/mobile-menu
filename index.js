@@ -27,6 +27,15 @@ const resetActiveSpan = () => {
   });
 };
 
+const effectOnWrapperMenu = (itemClicked) => {
+  const wrapper = document.querySelector('.wrapper-menu');
+
+  wrapper.classList.toggle(`${itemClicked.classList[1]}-effect`);
+  setTimeout(() => {
+    wrapper.classList.toggle(`${itemClicked.classList[1]}-effect`);
+  }, 500);
+};
+
 links.forEach((link) => {
   link.addEventListener('click', () => {
     resetActiveAttr(links);
@@ -35,5 +44,6 @@ links.forEach((link) => {
     link.setAttribute('active', true);
     link.childNodes[3].classList.toggle('active-span');
     changeColorLink(link, link.dataset.color);
+    effectOnWrapperMenu(link);
   });
 });
