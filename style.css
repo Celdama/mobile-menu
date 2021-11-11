@@ -5,7 +5,7 @@
 }
 
 #app {
-  background-color: palevioletred;
+  background-color: #ffb703;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -96,12 +96,14 @@ a {
 span {
   position: absolute;
   opacity: 0;
-  transform: translateY(90px);
+  transform: translateY(50px);
   pointer-events: none;
-  transition: transform 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .active-span {
+  font-weight: 600;
+  font-size: 14px;
   transform: translateY(34px);
   opacity: 1;
 }
