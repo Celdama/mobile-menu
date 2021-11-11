@@ -45,11 +45,38 @@ a {
   align-items: center;
 }
 
+.mobile-menu {
+  position: relative;
+  width: 100%;
+}
+
 .wrapper-menu .mobile-menu ul {
   list-style: none;
   display: flex;
+  justify-content: space-around;
 }
 
 .wrapper-menu .mobile-menu ul li {
   margin: 0 10px;
+  cursor: pointer;
+}
+
+.wrapper-menu .link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+span {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(90px);
+  pointer-events: none;
+  transition: transform 300ms ease-in-out;
+}
+
+.active-span {
+  transform: translateY(40px);
+  opacity: 1;
 }

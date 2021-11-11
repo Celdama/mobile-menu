@@ -18,11 +18,22 @@ const changeColorLink = (link, color) => {
   elementToChangeColor.style.color = color;
 };
 
+const resetActiveSpan = () => {
+  const spans = Array.from(document.querySelectorAll('.span-link'));
+  spans.forEach((span) => {
+    if (span.classList.contains('active-span')) {
+      span.classList.remove('active-span');
+    }
+  });
+};
+
 links.forEach((link) => {
   link.addEventListener('click', () => {
     resetActiveAttr(links);
+    resetActiveSpan();
     changeBackgroundColor(link.dataset.color);
     link.setAttribute('active', true);
+    link.childNodes[3].classList.toggle('active-span');
     changeColorLink(link, link.dataset.color);
   });
 });
